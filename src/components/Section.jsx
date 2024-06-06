@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './styles.module.scss';
 
 const Section = ({ title, children }) => {
   return (
-    <section>
+    <section className={styles.section}>
       <h1>{title}</h1>
       {children}
     </section>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import FeedbackOptions from './FeedbackOptions';
 import Statistics from './Statistics';
 import Section from './Section';
+import styles from './styles.module.scss';
 
 const countTotalFeedback = (state) => {
   return state.good + state.neutral + state.bad;
@@ -26,7 +27,7 @@ const App = () => {
   const positivePercentage = countPositiveFeedbackPercentage(state);
 
   return (
-    <div>
+    <div className={styles.container}>
       <Section title="Please leave feedback">
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}

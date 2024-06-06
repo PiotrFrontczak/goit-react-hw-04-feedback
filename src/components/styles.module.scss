@@ -1,0 +1,74 @@
+$primary-color: #4caf50;
+$neutral-color: #ff9800;
+$bad-color: #f44336;
+$text-color: #333;
+$background-color: #f9f9f9;
+$font-family: 'Arial, sans-serif';
+
+body {
+    font-family: $font-family;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+h1,
+h2 {
+    color: $text-color;
+    text-align: center;
+}
+
+button {
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+
+    &:nth-of-type(2) {
+        background-color: $neutral-color;
+
+        &:hover {
+            background-color: darken($neutral-color, 10%);
+        }
+    }
+
+    &:nth-of-type(3) {
+        background-color: $bad-color;
+
+        &:hover {
+            background-color: darken($bad-color, 10%);
+        }
+    }
+}
+
+p {
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.section {
+    margin-bottom: 20px;
+}
